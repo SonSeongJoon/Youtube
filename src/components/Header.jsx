@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import {Link, useNavigate, useParams} from "react-router-dom";
+import {BsSearch, BsYoutube} from "react-icons/bs"
 
 export function Header() {
     const {keyword} = useParams();
@@ -18,11 +19,21 @@ export function Header() {
     ), [keyword])
 
     return (
-        <div className="flex justify-between items-center p-3 border-b-black border-b">
-            <Link to='/' className="flex-shrink-0 text-xl font-bold">Youtube</Link>
-            <form className="flex-grow text-center" onSubmit={handleSubmit}>
-                <input type='text' className="border border-black mx-auto" value={value} onChange={handleChange}/>
-                <button>검색</button>
+        <div className="w-full flex p-4 text-2xl border-b border-zinc-600 mb-4">
+            <Link to='/' className='flex items-center'>
+                <BsYoutube className='text-4xl text-brand'/>
+                <h1 className='font-bold ml-2 text-3xl'>Youtube</h1>
+            </Link>
+            <form
+                className='w-full flex justify-center'
+                onSubmit={handleSubmit}>
+                <input
+                    className='w-7/12 p-2 outline-none bg-black text-gray-50'
+                    type='text'
+                    value={value}
+                    onChange={handleChange}
+                    placeholder='Search...'/>
+                <button className=''><BsSearch/></button>
             </form>
         </div>
     )

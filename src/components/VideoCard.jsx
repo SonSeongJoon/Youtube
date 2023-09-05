@@ -1,10 +1,10 @@
 import React from 'react';
 
-export function VideoDetail() {
+export function VideoCard({video}) {
 
     return (
         <>
-            VideoDetail
+            {video.snippet.title}
         </>
     )
 }
