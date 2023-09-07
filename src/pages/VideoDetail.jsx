@@ -12,14 +12,12 @@ export function VideoDetail() {
         <section>
             <article>
                 <iframe
-                    className='sm:max-w-screen-sm sm:max-h-full lg:max-w-screen-lg'
+                    className='w-full h-72 md:w-full md:h-[640px]'
                     style={{
                         border: 'none',
                     }}
                     id="player"
                     type="text/html"
-                    width="100%"
-                    height="640"
                     src={`https://www.youtube.com/embed/${video.id}`}
                     title={title}
                 >
