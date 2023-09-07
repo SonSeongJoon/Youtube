@@ -14,10 +14,9 @@ export function VideoDetail() {
         <section>
             <article>
                 <iframe
+                    className='sm:max-w-screen-sm sm:max-h-full lg:max-w-screen-lg'
                     style={{
                         border: 'none',
-                        height: isSmallScreen ? '360px' : '640px',
-                        width: isSmallScreen ? '360px' : '100%',
                     }}
                     id="player"
                     type="text/html"
