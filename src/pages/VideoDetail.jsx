@@ -3,6 +3,8 @@ import {useLocation} from "react-router-dom";
 import {ChannelInfo} from "../components/ChannelInfo";
 import {ReletedVideos} from "../components/ReletedVideos";
 
+const isSmallScreen = window.innerWidth <= 768;
+
 export function VideoDetail() {
     const {
         state: {video},
@@ -12,7 +14,11 @@ export function VideoDetail() {
         <section>
             <article>
                 <iframe
-                    style={{border: 'none'}}
+                    style={{
+                        border: 'none',
+                        height: isSmallScreen ? '360px' : '640px',
+                        width: isSmallScreen ? '360px' : '100%',
+                    }}
                     id="player"
                     type="text/html"
                     width="100%"
