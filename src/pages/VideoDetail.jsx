@@ -3,8 +3,6 @@ import {useLocation} from "react-router-dom";
 import {ChannelInfo} from "../components/ChannelInfo";
 import {ReletedVideos} from "../components/ReletedVideos";
 
-const isSmallScreen = window.innerWidth <= 768;
-
 export function VideoDetail() {
     const {
         state: {video},
